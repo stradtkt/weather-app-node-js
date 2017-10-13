@@ -11,7 +11,9 @@ var getWeather = (lat, lng, callback) => {
                 summary: body.currently.summary,
                 humidity: body.currently.humidity,
                 nearestStormDistance: body.currently.nearestStormDistance,
-                windGust: body.currently.windGust
+                windGust: body.currently.windGust,
+                hourly: body.hourly.summary,
+                time: new Date().toString()
             });
         } else {
             callback('Unable to fetch weather');
